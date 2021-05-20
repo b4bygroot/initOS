@@ -39,7 +39,13 @@ echo "Blackarch Keyring installed"
 sudo pacman -Syuu
 
 # Installing regular tools
-sudo pacman -S nmap dirb dirbuster gobuster seclists metasploit neofetch screenfetch mlocate 
+sudo pacman -S nmap dirb dirbuster gobuster seclists metasploit neofetch screenfetch mlocate vim ghidra snapd 
+
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+
+sudo snap install cherrytree
+sudo snap install pycharm-professional --classic
 
 # Changing shell to ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
