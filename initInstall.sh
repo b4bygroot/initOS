@@ -39,7 +39,7 @@ echo "Blackarch Keyring installed"
 sudo pacman -Syuu
 
 # Installing regular tools
-sudo pacman -S nmap dirb dirbuster gobuster seclists metasploit neofetch screenfetch mlocate vim ghidra snapd 
+sudo pacman -S nmap dirb dirbuster gobuster seclists metasploit neofetch screenfetch mlocate vim ghidra snapd burpsuite exploit-db exploitdb impacket 
 
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
@@ -53,4 +53,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 sudo cp -r $HOME/.oh-my-zsh /usr/share/.
 
 sudo mv /usr/share/.oh-my-zsh oh-my-zsh
+
+curl https://raw.githubusercontent.com/b4bygroot/initOS/main/zshrc --output .zshrc
+
+echo "Process Completed"
 
