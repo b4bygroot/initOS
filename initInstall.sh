@@ -39,7 +39,7 @@ echo "Blackarch Keyring installed"
 sudo pacman -Syuu
 
 # Installing regular tools
-sudo pacman -S nmap dirb dirbuster gobuster seclists metasploit neofetch screenfetch mlocate vim ghidra snapd burpsuite exploit-db exploitdb impacket 
+sudo pacman -Sy nmap dirb dirbuster gobuster seclists metasploit neofetch screenfetch mlocate vim ghidra snapd burpsuite exploit-db exploitdb impacket 
 
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
