@@ -25,7 +25,7 @@ echo "Font Installed"
 curl -O https://blackarch.org/strap.sh
 
 # Verify the SHA1 sum
-echo 95b485d400f5f289f7613fe576f4a3996aabed62 strap.sh | sha1sum -c
+echo edf8a85057ea49dce21eea429eb270535f3c5f9a strap.sh | sha1sum -c
 
 # Set execute bit
 chmod +x strap.sh
@@ -48,13 +48,13 @@ sudo snap install cherrytree
 sudo snap install pycharm-professional --classic
 
 # Changing shell to ZSH
+curl https://raw.githubusercontent.com/b4bygroot/initOS/main/zshrc --output .zshrc
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 sudo cp -r $HOME/.oh-my-zsh /usr/share/.
 
 sudo mv /usr/share/.oh-my-zsh oh-my-zsh
-
-curl https://raw.githubusercontent.com/b4bygroot/initOS/main/zshrc --output .zshrc
 
 echo "Process Completed"
 
