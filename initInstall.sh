@@ -39,13 +39,16 @@ echo "Blackarch Keyring installed"
 sudo pacman -Syuu
 
 # Installing regular tools
-sudo pacman -Sy nmap dirb dirbuster gobuster seclists metasploit neofetch screenfetch mlocate vim ghidra snapd burpsuite exploit-db exploitdb impacket 
+sudo pacman -Sy nmap dirb dirbuster gobuster seclists metasploit neofetch screenfetch mlocate vim ghidra snapd burpsuite exploit-db exploitdb impacket wmname
 
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 
 sudo snap install cherrytree
 sudo snap install pycharm-professional --classic
+
+# Issues with Pycharm
+echo "wmname LG3D" >> ~/.config/bspwm/bspwmrc
 
 # Changing shell to ZSH
 curl https://raw.githubusercontent.com/b4bygroot/initOS/main/zshrc --output .zshrc
